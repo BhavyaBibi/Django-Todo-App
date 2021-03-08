@@ -1,0 +1,11 @@
+<h1>To Do</h1>
+<form method="POST" action="/">
+    {% csrf-token %}
+    {{form.title}}
+    <inpyt type="submit" name="Create Task">
+</form>
+{% for task in tasks%}
+<div>
+    <p>{{task}}</p>
+</div>
+{% endfor %}
